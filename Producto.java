@@ -1,8 +1,15 @@
 
 public class Producto {
+    private String nombre;
+    private double precio;
 
-    public Producto(String string, double d) {
-        //TODO Auto-generated constructor stub
+    public Producto(String nombre, double precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+    }
+
+    public Object getNombre() {
+        return this.nombre;
     }
 
 }

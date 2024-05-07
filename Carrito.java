@@ -1,8 +1,14 @@
+import java.util.ArrayList;
 
 public class Carrito {
+    private ArrayList<Producto> productos;
+  
+    public Carrito() {
+        productos = new ArrayList<>();
+    }
 
     public int getCantidad() {
-        return 0;
+        return productos.size();
     }
 
     public Double getTotalPorPagar() {
@@ -10,7 +16,16 @@ public class Carrito {
     }
 
     public void agregarProducto(Producto producto) {
-        
+        productos.add(producto);
     }
+
+	public Object getProducto(String nombreProducto) {
+        for (Producto p : productos) {
+            if (nombreProducto.equals(p.getNombre())) {
+                return p;
+            }
+        }
+        return null;
+	}
 
 }
